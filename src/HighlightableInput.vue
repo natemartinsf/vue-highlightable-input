@@ -84,9 +84,13 @@ export default {
     },
 
     htmlOutput() {
-      var selection = this.saveSelection(this.$el)
+      const shouldSaveSelection = document.activeElement === this.$el
+      var selection
+      if (shouldSaveSelection)
+        selection = this.saveSelection(this.$el)
       this.$el.innerHTML = this.htmlOutput
-      this.restoreSelection(this.$el, selection)
+      if (shoouldSaveSelection)
+        this.restoreSelection(this.$el, selection)
     }
   },
   
