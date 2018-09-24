@@ -1346,7 +1346,7 @@ var HighlightableInput = {render: function(){var _vm=this;var _h=_vm.$createElem
       if (shouldSaveSelection)
         selection = this.saveSelection(this.$el);
       this.$el.innerHTML = this.htmlOutput;
-      if (shoouldSaveSelection)
+      if (shouldSaveSelection)
         this.restoreSelection(this.$el, selection);
     }
   },
