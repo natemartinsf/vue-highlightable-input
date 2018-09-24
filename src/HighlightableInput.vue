@@ -54,6 +54,7 @@ export default {
   mounted () {
       if (this.fireOnEnabled)
         this.$el.addEventListener(this.fireOn, this.handleChange)
+      this.processHighlights()
   },
 
   watch: {
