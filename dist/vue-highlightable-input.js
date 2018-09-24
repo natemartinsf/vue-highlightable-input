@@ -1311,6 +1311,7 @@ var HighlightableInput = {render: function(){var _vm=this;var _h=_vm.$createElem
   mounted () {
       if (this.fireOnEnabled)
         this.$el.addEventListener(this.fireOn, this.handleChange);
+      this.internalValue = this.value;
       this.processHighlights();
   },
 
